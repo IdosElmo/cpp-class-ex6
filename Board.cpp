@@ -90,7 +90,7 @@ Board& Board::operator= (const Board& _board) {
         
         for(int i = 0; i < squer; i++) {
                 for(int j = 0; j < squer; j++) {
-                  board[i][j].setP(b.board[i][j].piece);
+                  board[i][j].setP(b.board[i][j].getP());
         }
     }
     return *this;
