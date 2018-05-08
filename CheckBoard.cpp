@@ -1,6 +1,5 @@
 #include "CheckBoard.h"
-#include "IllegalException.h"
-#include "IllegalCoordinateException.h"
+
 
 
 CheckBoard::CheckBoard(){
