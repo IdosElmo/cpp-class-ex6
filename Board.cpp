@@ -81,7 +81,7 @@ Board::~Board(){
 }
 
 Board& Board::operator= (const Board& _board) {
-      //  this->~Board();
+        this->~Board();
         squer = _board.squer;
         board = new CheckBoard*[squer];
         
