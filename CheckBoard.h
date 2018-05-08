@@ -8,6 +8,8 @@
 // This allow to use the class CheckBoard in the class Board and
 // use the class Board in the class CheckBoard too.
 
+#include "IllegalCharException.h"
+#include "IllegalCoordinateException.h"
 
 using namespace std;
 
