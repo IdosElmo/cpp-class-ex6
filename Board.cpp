@@ -81,13 +81,14 @@ Board::~Board(){
 }
 
 Board& Board::operator= (const Board& _board) {
-    board = new CheckBoard*[squer];
-    for(size_t i = 0; i < _board.squer; i++)
+        this->~Board();
+        board = new CheckBoard*[squer];
+        for(size_t i = 0; i < _board.squer; i++)
         board[i] = new CheckBoard[squer];
         
-    for(size_t i = 0; i < _board.squer; i++) {
-        for(size_t j = 0; j < _board.squer; j++) {
-        board[i][j] = _board.board[i][j];
+        for(size_t i = 0; i < _board.squer; i++) {
+                for(size_t j = 0; j < _board.squer; j++) {
+                  board[i][j] = _board.board[i][j];
         }
     }
     return *this;
