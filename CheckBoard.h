@@ -29,6 +29,7 @@ class CheckBoard {
     
         void setP(char Char);
 
+        char getP() const;
         
     protected:
 
