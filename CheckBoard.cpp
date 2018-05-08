@@ -14,6 +14,10 @@ void CheckBoard::operator= (char Char) {
    setP(Char);
 }
 
+char CheckBoard::getP() const {
+    return piece;   
+}
+
 void CheckBoard::setP(char Char){
     if (Char != '.' && Char != 'X' && Char != 'O')
     throw IllegalCharException(Char);
