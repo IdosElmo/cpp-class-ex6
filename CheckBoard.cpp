@@ -3,16 +3,20 @@
 
 
 CheckBoard::CheckBoard(){
-    this->piece = '.';
+    setP('.');
 }
 
 CheckBoard::CheckBoard(char Char){
-    piece = Char;
+    setP(Char);
 }
 
 void CheckBoard::operator= (char Char) {
+   setP(Char);
+}
+
+void CheckBoard::setP(char Char){
     if (Char != '.' && Char != 'X' && Char != 'O')
-        throw IllegalCharException(Char);
+    throw IllegalCharException(Char);
     piece = Char;
 }
 
