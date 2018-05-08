@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class IllegalCoordinateException{
+class IllegalCoordinateException : public exception{
     
     public:
     
