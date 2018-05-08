@@ -4,6 +4,6 @@ IllegalCharException::IllegalCharException(char Char) {
     this->Char = Char;
 }
 
-char IllegalCharException::getChar() const {
+char IllegalCharException::TheChar() const {
     return Char;
 }
