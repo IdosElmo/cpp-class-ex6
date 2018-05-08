@@ -32,6 +32,8 @@ class CheckBoard {
         void operator= (char Char);
 
         operator char() const;
+    
+        void setP(char Char);
 
         
     protected:
