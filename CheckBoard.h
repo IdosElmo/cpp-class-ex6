@@ -14,28 +14,22 @@ using namespace std;
 class CheckBoard {
 
     public:
-
-        //Constructor.
         
         CheckBoard();
         
         CheckBoard(char Char);
+    
+        void setP(char Char);
 
-        //Operator
+        char getP() const;
 
         void operator= (char Char);
 
         operator char() const;
     
-        void setP(char Char);
-
-        char getP() const;
-        
-    protected:
-
+    
     private:
-
-        //Variables of the object.
+    
         char piece;
         
         friend ostream& operator<< (ostream& os, const CheckBoard& piece);
