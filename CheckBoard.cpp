@@ -1,5 +1,7 @@
 #include "CheckBoard.h"
 #include "IllegalException.h"
+#include "IllegalCoordinateException.h"
+
 
 CheckBoard::CheckBoard(){
     this->piece = '.';
@@ -11,7 +13,7 @@ CheckBoard::CheckBoard(char Char){
 
 void CheckBoard::operator= (char Char) {
     if (Char != '.' && Char != 'X' && Char != 'O')
-        throw IllegalException(Char);
+        throw IllegalCharException(Char);
     piece = Char;
 }
 
