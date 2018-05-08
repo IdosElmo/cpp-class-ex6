@@ -23,11 +23,11 @@ using namespace std;
         Board::Board(const Board& _board) {
           squer = _board.squer;
           board = new CheckBoard*[squer];
-          for(size_t i = 0; i < squer; i++)
+          for(int i = 0; i < squer; i++)
                 board[i] = new CheckBoard[squer];
                 
-              for (size_t i = 0; i < squer; i++) {
-               for (size_t j = 0; j < squer; j++) {
+              for (int i = 0; i < squer; i++) {
+               for (int j = 0; j < squer; j++) {
             board[i][j] = _board.board[i][j];
         }
     }
@@ -82,13 +82,15 @@ Board::~Board(){
 
 Board& Board::operator= (const Board& _board) {
       //  this->~Board();
+        squer = _board.squer;
         board = new CheckBoard*[squer];
-        for(size_t i = 0; i < _board.squer; i++)
+        
+        for(int i = 0; i < squer; i++)
         board[i] = new CheckBoard[squer];
         
-        for(size_t i = 0; i < _board.squer; i++) {
-                for(size_t j = 0; j < _board.squer; j++) {
-                  board[i][j] = _board.board[i][j];
+        for(int i = 0; i < squer; i++) {
+                for(int j = 0; j < squer; j++) {
+                  board[i][j].setP(b.board[i][j].piece);
         }
     }
     return *this;
