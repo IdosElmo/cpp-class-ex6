@@ -29,13 +29,14 @@ class Board {
 
         CheckBoard& operator [](vector<int> point);
      
-     friend ostream& operator<< (ostream& os, const Board& board);
+        friend ostream& operator<< (ostream& os, const Board& board);
         
         void printBoard();
         
     private:
     
         CheckBoard** board;
+    
         int squer;
 
 };
