@@ -70,13 +70,13 @@ Board::~Board(){
     Board& Board::operator= (char Char){
         if(Char != '.' && Char != 'X' && Char != 'O')
         throw IllegalCharException(Char);
-            else{
+       
     for (int i = 0; i < squer; i++) {
         for (int j = 0; j < squer; j++) {
             board[i][j] = Char;
         }
     }
- }
+ 
     return *this;
 }
 
