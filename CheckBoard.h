@@ -5,18 +5,12 @@
 
 #include <iostream>
 
-// This allow to use the class CheckBoard in the class Board and
-// use the class Board in the class CheckBoard too.
 
 #include "IllegalCharException.h"
 #include "IllegalCoordinateException.h"
 
 using namespace std;
 
-/**
- * \brief This class fulfill the Board.
- * \author Johann and Samuel.
- */
 class CheckBoard {
 
     public:
