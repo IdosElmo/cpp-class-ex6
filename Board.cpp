@@ -42,7 +42,7 @@ Board::~Board(){
     
         CheckBoard& Board::operator[] (vector<int> point) {
             if (point.at(0) < 0 || point.at(0) >= squer || point.at(1) < 0 || point.at(1) >= squer)
-            throw IllegalException(point.at(0), point.at(1));
+            throw IllegalCoordinateException(point.at(0), point.at(1));
             return board[point.at(0)][point.at(1)];
 }   
 
@@ -68,12 +68,14 @@ Board::~Board(){
     
     Board& Board::operator= (char Char){
         if(Char != '.' && Char != 'X' && Char != 'O')
-        printf("IllegalCharException"); //throw IllegalCharException(Char);
+        throw IllegalCharException(Char);
+            else{
     for (int i = 0; i < squer; i++) {
         for (int j = 0; j < squer; j++) {
             board[i][j] = Char;
         }
     }
+ }
     return *this;
 }
 
