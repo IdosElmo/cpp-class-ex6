@@ -6,7 +6,8 @@
 #include <list>
 
 #include "CheckBoard.h"
-#include "IllegalException.h"
+#include "IllegalCharException.h"
+#include "IllegalCoordinateException.h"
 
 using namespace std;
 
