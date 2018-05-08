@@ -23,8 +23,9 @@ using namespace std;
         Board::Board(const Board& _board) {
           squer = _board.squer;
           board = new CheckBoard*[squer];
-              for(size_t i = 0; i < squer; i++)
+          for(size_t i = 0; i < squer; i++)
                 board[i] = new CheckBoard[squer];
+                
               for (size_t i = 0; i < squer; i++) {
                for (size_t j = 0; j < squer; j++) {
             board[i][j] = _board.board[i][j];
