@@ -17,7 +17,7 @@ class IllegalCharException : public exception {
     
        // IllegalCharException(int x, int y);
     
-        char getChar() const;
+        char TheChar() const;
 
        // string getPoint() const;
 
